@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #cad593;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section {
+  height: 600px;
+  width: 400px;
+  background-color: #243010;
+  margin-top: 10%;
+  border-radius: 15px;
+}
+
+#input {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  width: 80%;
+  height: 30px;
+  margin: 8px;
+}
+
+button {
+  background-color: white;
+  outline: none;
+  padding: 7px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.01rem;
+}
+
+button:hover {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+#addButton {
+  margin-right: 10px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.listBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.listItems {
+  font-size: 1.5rem;
+  width: 90%;
+  height: 40vh;
+  position: relative;
+  margin-top: 1vh;
+}
+
+ul {
+  color: white;
+  z-index: +1;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  margin-top: 65%;
+}
+
+#clearButton {
+  width: 100px;
+  position: relative;
+  right: -70%;
+  bottom: -90%;
+}
+
+ul li:nth-child(odd) {
+  color: #243010;
+  background-color: #87a330;
+}
+
+ul li:nth-child(even) {
+  color: #243010;
+  background-color: #cad593;
+}
+
+li {
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 0vh;
+  margin-right: 1vh;
+  height: 20px;
+  width: 20px;
+  border-radius: 100px;
+}
+/*# sourceMappingURL=main.css.map */
