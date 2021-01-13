@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lato', sans-serif;
   text-decoration: none;
 }
 
@@ -11,7 +11,8 @@ a {
 }
 
 body {
-  background-color: #cad593;
+  background: -webkit-gradient(linear, left top, left bottom, from(#A770EF), color-stop(#CF8BF3), to(#FDB99B));
+  background: linear-gradient(#A770EF, #CF8BF3, #FDB99B);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,27 +22,75 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100vh;
 }
 
 section {
-  height: 600px;
+  height: 620px;
   width: 400px;
-  background-color: #243010;
-  margin-top: 10%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  -webkit-box-shadow: white 1px 1px 1px;
+          box-shadow: white 1px 1px 1px;
   border-radius: 15px;
+  padding: 5px;
 }
 
-#input {
+section #clearButton {
+  right: -87%;
+  margin-top: 2%;
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px white solid;
+  color: #A770EF;
+  text-shadow: white 1px 1px 1px;
+  font-size: 1.4rem;
+  -webkit-box-shadow: #A770EF 2px 2px 1px;
+          box-shadow: #A770EF 2px 2px 1px;
+}
+
+section .form {
+  position: relative;
+  bottom: -83%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .form #input {
   border-radius: 10px;
   border: none;
   outline: none;
   padding-left: 10px;
   width: 80%;
-  height: 30px;
+  height: 36px;
   margin: 8px;
+  font-size: 1.2rem;
+  color: #A770EF;
 }
 
-button {
+section .form #addButton {
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px white solid;
+  color: #A770EF;
+  text-shadow: white 1px 1px 1px;
+  font-size: 1.4rem;
+  -webkit-box-shadow: #A770EF 2px 2px 1px;
+          box-shadow: #A770EF 2px 2px 1px;
+  font-size: 1.2rem;
+}
+
+section button {
   background-color: white;
   outline: none;
   padding: 7px;
@@ -51,25 +100,12 @@ button {
   font-size: 1.01rem;
 }
 
-button:hover {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+section button:hover {
+  -webkit-filter: invert(10%);
+          filter: invert(10%);
 }
 
-#addButton {
-  margin-right: 10px;
-}
-
-.form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.listBody {
+section .listBody {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,71 +117,62 @@ button:hover {
           justify-content: center;
 }
 
-.listItems {
+section .listBody .listItems {
   font-size: 1.5rem;
-  width: 90%;
+  width: 95%;
   height: 40vh;
   position: relative;
-  margin-top: 1vh;
+  margin-top: -5vh;
 }
 
-ul {
+section .listBody .listItems ul {
   color: white;
   z-index: +1;
 }
 
-footer {
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  margin-top: 65%;
-}
-
-#clearButton {
-  width: 100px;
-  position: relative;
-  right: -70%;
-  bottom: -90%;
-}
-
-ul li:nth-child(odd) {
-  color: #243010;
-  background-color: #87a330;
-}
-
-ul li:nth-child(even) {
-  color: #243010;
-  background-color: #cad593;
-}
-
-li {
+section .listBody .listItems ul li {
   border-radius: 5px;
-  padding: 5px;
-  margin-top: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 5px 0px 5px 10px;
+  margin-top: 6px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #A770EF;
+  border: white solid 2px;
+  -webkit-animation: aparecer 0.2s ease-in;
+          animation: aparecer 0.2s ease-in;
 }
 
-.checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+section .listBody .listItems ul li .checkbox {
+  font-size: 1.5rem;
   position: absolute;
   right: 0vh;
-  margin-right: 1vh;
-  height: 20px;
-  width: 20px;
+  margin-right: 1.4vh;
+  height: 25px;
+  width: 25px;
   border-radius: 100px;
+  text-align: center;
+}
+
+section .listBody .listItems ul li .checkbox i {
+  text-align: center;
+  color: #A770EF;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

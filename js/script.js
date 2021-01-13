@@ -3,8 +3,7 @@ var $counting = (document.getElementById("ul").getElementsByTagName("li").length
 var $ul = document.getElementById('ul')
 var $input = document.getElementById('input')
 
-
-
+//Chama a função addItemTodo() ao pressionar a tecla enter
 $input.addEventListener('keyup', (event) => {
     if(event.keyCode === 13){
         addItemTodo()
@@ -16,9 +15,9 @@ $input.addEventListener('keyup', (event) => {
 function addItemTodo(){
     // Valores de váriaveis que serão utilizados
     var $li = document.createElement('li')
-    var $checkbox = document.createElement('button')
+    var $checkbox = document.createElement('SPAN')
     $checkbox.className = 'checkbox'
-    $checkbox.innerHTML = '\u00D7'
+    $checkbox.innerHTML = '<i class="far fa-times-circle"></i>'
 
     $counting += 1
 
@@ -30,7 +29,7 @@ function addItemTodo(){
     }
 
     //Teste de input, caso o valor seja nulo, a função retorna e previne o auto-incremento
-    if (($input.value) == ''){
+    if (($input.value == '') || ($input.value == ' ')){
         $counting -= 1
         alert('Insira um item')
     } else {

@@ -1,104 +1,97 @@
-section{
-    height: 600px;
+section {
+    height: 620px;
     width: 400px;
-    background-color: $one;
-    margin-top: 10%;
+    background-color: rgba($color: white, $alpha: 0.3);
+    border: 2px solid white;
+    box-shadow: white 1px 1px 1px;
     border-radius: 15px;
-}
-
-#input {
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    padding-left: 10px;
-    width: 80%;
-    height: 30px;
-    margin: 8px;
-}
-
-button{
-    background-color: white;
-    outline: none;
-    padding: 7px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.01rem;
-}
-
-button:hover{
-    filter: invert(100%);
-}
-
-#addButton{
-    margin-right: 10px;
-}
-
-.form{
-    display: flex;
-    align-items: center;
-}
-
-.listBody{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.listItems{
-    font-size: 1.5rem;
-    width: 90%;
-    height: 40vh;
-    position: relative;
-    margin-top: 1vh;
-}
-
-ul{
-    color: white;
-    z-index: +1;
-}
-
-footer{
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    margin-top: 65%;
-}
-
-#clearButton{
-    width: 100px;
-    position: relative;
-    right: -70%;
-    bottom: -90%;
-}
-
-ul li:nth-child(odd){
-    color: $one;
-    background-color: $two;
-}
-
-ul li:nth-child(even){
-    color: $one;
-    background-color: $four;
-}
-
-li{
-    border-radius: 5px;
     padding: 5px;
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-}
+    #clearButton {
+        right: -87%;
+        margin-top: 2%;
+        @include buttonStyle;
+    }
+    .form {
+        position: relative;
+        bottom: -83%;
+        display: flex;
+        align-items: center;
+        #input {
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            width: 80%;
+            height: 36px;
+            margin: 8px;
+            font-size: 1.2rem;
+            color: $color-one;
+        }
+        #addButton {
+            @include buttonStyle;
+            font-size: 1.2rem;
+        }
+    }
+    button {
+        background-color: white;
+        outline: none;
+        padding: 7px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1.01rem;
+    }
 
-.checkbox{
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    justify-content: center;
-    position: absolute;
-    right: 0vh;
-    margin-right: 1vh;
-    height: 20px;
-    width: 20px;
-    border-radius: 100px;
+    button:hover {
+        filter: invert(10%);
+    }
+
+    .listBody {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .listItems {
+            font-size: 1.5rem;
+            width: 95%;
+            height: 40vh;
+            position: relative;
+            margin-top: -5vh;
+            ul {
+                color: white;
+                z-index: +1;
+                li {
+                    border-radius: 5px;
+                    padding: 5px 0px 5px 10px;
+                    margin-top: 6px;
+                    background-color: rgba($color: white, $alpha: 0.5);
+                    color: $color-one;
+                    border: white solid 2px;
+                    animation: aparecer 0.2s ease-in;
+                    @keyframes aparecer{
+                        0%{
+                            opacity: 0;
+                        }
+                        100%{
+                            opacity: 100%;
+                        }
+                    }
+                    .checkbox {
+                        font-size: 1.5rem;
+                        position: absolute;
+                        right: 0vh;
+                        margin-right: 1.4vh;
+                        height: 25px;
+                        width: 25px;
+                        border-radius: 100px;
+                        text-align: center;
+                        i{
+                            text-align: center;
+                            color: $color-one;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

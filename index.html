@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/3c9de441d8.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <section class="section">
-      <button id="clearButton" onclick="clearTodoList()">Limpar</button>
+      <header>
+        <button id="clearButton" onclick="clearTodoList()"><i class="far fa-trash-alt"></i></button>
+      </header>
       <div class="form">
-        <input type="text" id="input" />
-        <button id="addButton" onclick="addItemTodo()">Adicionar</button>
+        <input type="text" id="input"/>
+        <button id="addButton" onclick="addItemTodo()"><i class="fas fa-plus"></i></button>
       </div>
       <div class="listBody">
         <div class="listItems">
-          <ul id="ul">
-          </ul>
+          <ul id="ul"></ul>
         </div>
       </div>
     </section>
