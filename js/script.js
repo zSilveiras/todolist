@@ -4,8 +4,16 @@ var $ul = document.getElementById('ul')
 var $input = document.getElementById('input')
 var $dateTitle = document.getElementById('dateTitle')
 var $hoursTitle = document.getElementById('hoursTitle')
+var $loadingScreen = document.getElementById('loadingScreen')
+
 
 window.onload = time()
+
+function load(){
+    $loadingScreen.style.display = 'none'
+}
+
+setTimeout(load, 1500)
 
 //Função de criação do relógio
 function time(){

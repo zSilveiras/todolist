@@ -146,3 +146,56 @@ section {
             }
         }
 }
+
+@media screen and (max-width: 600px){
+    section{
+        height: 100vh;
+        width: 100vw;
+    }
+    #weekDay{
+        position: absolute;
+        left: 210%;
+    }
+    li{
+        margin-bottom: 15px;
+    }
+    .form{
+        top: 74%;
+    }
+}
+
+.loading{
+    z-index: 99;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient($color-one, $color-two, $color-three);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .dot{
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        background: white;
+        border-radius: 50px;
+        animation: jump .3s ease-in alternate infinite;
+        @keyframes jump{
+            0%{
+                transform: translateY(0px);
+            }
+            100%{
+                transform: translateY(30px);
+            }
+        }
+    }
+    .one{
+        animation-delay: 0s;
+    }
+    .two{
+        animation-delay: 0.2s;
+    }
+    .three{
+        animation-delay: 0.4s;
+    }
+}
