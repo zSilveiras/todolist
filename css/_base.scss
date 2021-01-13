@@ -1,22 +1,25 @@
-$color-one: #A770EF;
-$color-two: #CF8BF3;
-$color-three: #FDB99B;
+$color-one: #a770ef;
+$color-two: #cf8bf3;
+$color-three: #fdb99b;
 $color-four: #ffebfd;
-$white: rgba($color: white, $alpha: 0.3);
+$white: rgba(
+	$color: white,
+	$alpha: 0.3,
+);
 
 * {
-	margin:0;
-	padding:0;
-	list-style:none;
-	font-family: 'Lato', sans-serif;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "Lato", sans-serif;
 	text-decoration: none;
-	}
+}
 a {
 	text-decoration: none;
 }
 
 body {
-	background: linear-gradient(#A770EF, #CF8BF3, #FDB99B);
+	background: linear-gradient(#a770ef, #cf8bf3, #fdb99b);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -26,12 +29,24 @@ body {
 @mixin buttonStyle {
 	border-radius: 50px;
 	width: 45px;
-    height: 45px;
-    position: relative;
- 	background-color: $white;
-    border: 2px white solid;
-    color: $color-one;
-    text-shadow: white 1px 1px 1px;
-    font-size: 1.4rem;
-    box-shadow: $color-one 2px 2px 1px;
+	height: 45px;
+	position: relative;
+	background-color: $white;
+	border: 2px white solid;
+	color: $color-one;
+	text-shadow: white 1px 1px 1px;
+	font-size: 1.4rem;
+	box-shadow: $color-one 2px 2px 1px;
+}
+
+@mixin aparecer {
+	animation: aparecer 0.2s ease-in;
+	@keyframes aparecer {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 100%;
+		}
+	}
 }

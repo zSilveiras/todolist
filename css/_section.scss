@@ -66,14 +66,7 @@ section {
                     background-color: rgba($color: white, $alpha: 0.5);
                     color: $color-one;
                     border: white solid 2px;
-                    animation: aparecer 0.2s ease-in;
-                    @keyframes aparecer{
-                        0%{
-                            opacity: 0;
-                        }
-                        100%{
-                            opacity: 100%;
-                        }
+                    @include aparecer;
                     }
                     .checkbox {
                         font-size: 1.5rem;
