@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TUDU</title>
+    <title>To-Do</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -15,10 +15,16 @@
   <body>
     <section class="section">
       <header>
+        <span>
+          <p id="dayTitle"></p>
+          <p id="monthTitle"></p>
+          <p id="yearTitle"></p>
+          <p id="weekDay"></p>
+        </span>
         <button id="clearButton" onclick="clearTodoList()"><i class="far fa-trash-alt"></i></button>
       </header>
       <div class="form">
-        <input type="text" id="input"/>
+        <input type="text" id="input" maxlength="30"/>
         <button id="addButton" onclick="addItemTodo()"><i class="fas fa-plus"></i></button>
       </div>
       <div class="listBody">

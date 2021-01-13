@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   text-decoration: none;
 }
 
@@ -11,8 +11,8 @@ a {
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#A770EF), color-stop(#CF8BF3), to(#FDB99B));
-  background: linear-gradient(#A770EF, #CF8BF3, #FDB99B);
+  background: -webkit-gradient(linear, left top, left bottom, from(#a770ef), color-stop(#cf8bf3), color-stop(150%, #fdb99b));
+  background: linear-gradient(#a770ef, #cf8bf3, #fdb99b 150%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,35 +26,104 @@ body {
 }
 
 section {
-  height: 620px;
+  height: 640px;
   width: 400px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 2px solid white;
-  -webkit-box-shadow: white 1px 1px 1px;
-          box-shadow: white 1px 1px 1px;
+  background-color: white;
   border-radius: 15px;
-  padding: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
+          box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
 }
 
-section #clearButton {
+section header {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 120px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cf8bf3), to(#a770ef));
+  background: linear-gradient(#cf8bf3, #a770ef);
+}
+
+section header span {
+  color: white;
+  position: absolute;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.3rem;
+}
+
+section header span #dayTitle {
+  font-size: 4rem;
+  margin: 20px 0 0 20px;
+}
+
+section header span #monthTitle {
+  position: abolute;
+  margin-left: 10px;
+}
+
+section header span #yearTitle {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  margin-left: 10px;
+}
+
+section header span #weekDay {
+  font-size: 1.4rem;
+  position: absolute;
+  right: -105%;
+  bottom: -15%;
+}
+
+section header #clearButton {
   right: -87%;
-  margin-top: 2%;
+  margin-top: 3%;
   border-radius: 50px;
   width: 45px;
   height: 45px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.3);
   border: 2px white solid;
-  color: #A770EF;
+  color: #a770ef;
   text-shadow: white 1px 1px 1px;
   font-size: 1.4rem;
-  -webkit-box-shadow: #A770EF 2px 2px 1px;
-          box-shadow: #A770EF 2px 2px 1px;
+  -webkit-box-shadow: #a770ef 2px 2px 1px;
+          box-shadow: #a770ef 2px 2px 1px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+section header #clearButton:hover {
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px white solid;
+  color: #a770ef;
+  text-shadow: white 1px 1px 1px;
+  font-size: 1.4rem;
+  -webkit-box-shadow: #a770ef 2px 2px 1px;
+          box-shadow: #a770ef 2px 2px 1px;
+  font-size: 1.2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cf8bf3), to(#a770ef));
+  background: linear-gradient(#cf8bf3, #a770ef);
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 2px solid white;
+  text-shadow: none;
 }
 
 section .form {
   position: relative;
-  bottom: -83%;
+  bottom: -71%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,7 +141,8 @@ section .form #input {
   height: 36px;
   margin: 8px;
   font-size: 1.2rem;
-  color: #A770EF;
+  color: #a770ef;
+  border: #a770ef 2px solid;
 }
 
 section .form #addButton {
@@ -82,12 +152,35 @@ section .form #addButton {
   position: relative;
   background-color: rgba(255, 255, 255, 0.3);
   border: 2px white solid;
-  color: #A770EF;
+  color: #a770ef;
   text-shadow: white 1px 1px 1px;
   font-size: 1.4rem;
-  -webkit-box-shadow: #A770EF 2px 2px 1px;
-          box-shadow: #A770EF 2px 2px 1px;
+  -webkit-box-shadow: #a770ef 2px 2px 1px;
+          box-shadow: #a770ef 2px 2px 1px;
   font-size: 1.2rem;
+  border: #a770ef 2px solid;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+section .form #addButton:hover {
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px white solid;
+  color: #a770ef;
+  text-shadow: white 1px 1px 1px;
+  font-size: 1.4rem;
+  -webkit-box-shadow: #a770ef 2px 2px 1px;
+          box-shadow: #a770ef 2px 2px 1px;
+  font-size: 1.2rem;
+  background-color: #a770ef;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: #a770ef 2px solid;
 }
 
 section button {
@@ -98,11 +191,6 @@ section button {
   border-radius: 10px;
   cursor: pointer;
   font-size: 1.01rem;
-}
-
-section button:hover {
-  -webkit-filter: invert(10%);
-          filter: invert(10%);
 }
 
 section .listBody {
@@ -132,13 +220,14 @@ section .listBody .listItems ul {
 
 section .listBody .listItems ul li {
   border-radius: 5px;
-  padding: 5px 0px 5px 10px;
-  margin-top: 6px;
+  padding: 4px 0px 4px 10px;
+  margin-top: 7px;
   background-color: rgba(255, 255, 255, 0.5);
-  color: #A770EF;
-  border: white solid 2px;
+  color: #a770ef;
+  border: #a770ef solid 2px;
   -webkit-animation: aparecer 0.2s ease-in;
           animation: aparecer 0.2s ease-in;
+  overflow: hidden;
 }
 
 @-webkit-keyframes aparecer {
@@ -159,20 +248,30 @@ section .listBody .listItems ul li {
   }
 }
 
-section .listBody .listItems ul li .checkbox {
+section .listBody .listItems ul .checkbox {
   font-size: 1.5rem;
   position: absolute;
-  right: 0vh;
-  margin-right: 1.4vh;
+  margin-top: 1%;
+  right: 5%;
   height: 25px;
   width: 25px;
   border-radius: 100px;
   text-align: center;
 }
 
-section .listBody .listItems ul li .checkbox i {
+section .listBody .listItems ul .checkbox i {
+  position: absolute;
   text-align: center;
-  color: #A770EF;
+  color: #a770ef;
   cursor: pointer;
+}
+
+section .listBody .listItems li:hover {
+  color: white;
+  background-color: #a770ef;
+}
+
+section .listBody .listItems li:hover i {
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */

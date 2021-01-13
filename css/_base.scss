@@ -19,7 +19,7 @@ a {
 }
 
 body {
-	background: linear-gradient(#a770ef, #cf8bf3, #fdb99b);
+	background: linear-gradient($color-one, $color-two, $color-three 150%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
