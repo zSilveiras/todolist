@@ -71,6 +71,9 @@ section {
             color: $color-one;
             border: $color-one 2px solid;
         }
+        #input::first-letter{
+            text-transform: capitalize
+        }
         #addButton {
             @include buttonStyle;
             font-size: 1.2rem;
@@ -153,14 +156,18 @@ section {
         width: 100vw;
     }
     #weekDay{
+        width: 90px;
         position: absolute;
-        left: 210%;
+        left: 15%;
     }
     li{
         margin-bottom: 15px;
     }
     .form{
         top: 74%;
+    }
+    span{
+        top: -1%;
     }
 }
 

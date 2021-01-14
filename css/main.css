@@ -145,6 +145,10 @@ section .form #input {
   border: #a770ef 2px solid;
 }
 
+section .form #input::first-letter {
+  text-transform: capitalize;
+}
+
 section .form #addButton {
   border-radius: 50px;
   width: 45px;
@@ -281,14 +285,18 @@ section .listBody .listItems li:hover i {
     width: 100vw;
   }
   #weekDay {
+    width: 90px;
     position: absolute;
-    left: 210%;
+    left: 15%;
   }
   li {
     margin-bottom: 15px;
   }
   .form {
     top: 74%;
+  }
+  span {
+    top: -1%;
   }
 }
 
