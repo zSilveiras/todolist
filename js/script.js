@@ -19,7 +19,7 @@ setTimeout(load, 1500)
 function time(){
     var $date = new Date()
     var $day = $date.getDate()
-    var $month = $date.getMonth() + 1
+    var $month = $date.getMonth()
     var $year = $date.getFullYear()
 
     const $event = new Date($year, $month, $day)
